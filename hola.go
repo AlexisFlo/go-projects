@@ -12,6 +12,6 @@ func main() {
 
 	// Variables
 	// dentro de las funciones se usa := para declarar variables
-	name, lastName, age := "Morchi", "Fernandez", 27
+	name, lastName, age := "Mochi", "Morchi", 27
 	fmt.Println("Te amo", name, lastName, age)
 }
