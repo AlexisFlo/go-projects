@@ -2,29 +2,27 @@ package main
 
 import "fmt"
 
+/*
+	You are delivering packages to customers. You have 100 packages to deliver.
+
+	1. Print the number of package you are going to deliver For example: "I have 100 packages to deliver"
+
+	2. You have delivered 20 packages. Print the remaining packages to deliver
+
+	3. The packages are going to be distributed equally between 4 customers. Print how many packages each customer receives (while mentioning the number of customers)
+*/
+
 func main() {
-	// const name = "Alexis"
-	// age := 26
-	// fmt.Println("My name is", name, "and I'm", age, "years old")
+	var customers = 4
+	var packagesToDeliver = 100
 
-	// fmt.Println("Skynet Beta Testing")
+	fmt.Println("I have", packagesToDeliver, "packages to deliver")
 
-	// var Objective = "Defend Humanity"
-	// This fail because the objective vairable is not used
+	var deliveredPackages = 20
+	packagesToDeliver -= deliveredPackages
+	fmt.Printf("I have delivered %v packages\n", deliveredPackages)
+	fmt.Printf("Remaining packages to deliver: %v\n", packagesToDeliver)
 
-	const squares = 2
-	var circles = 0
-
-	fmt.Println("Squares:", squares)
-	fmt.Println("Circles:", circles)
-
-	squares = 1
-	cirlces = 7
-
-	fmt.Println("Squares:", squares)
-	fmt.Println("Circles:", circles)
-
-	// this will fail because the variable squares is a constant and
-	// cannot be reassigned a new value
-
+	packagesPerCustomer := packagesToDeliver / customers
+	fmt.Printf("Packages are going to be distributed equally between %v customers. This means %v packages per customer", customers, packagesPerCustomer)
 }
