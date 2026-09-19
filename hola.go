@@ -1,40 +1,30 @@
 package main
 
-import (
-	"fmt"
-
-	"rsc.io/quote"
-)
-
-// Declaración de constantes
-const Pi float32 = 3.14
-
-const (
-	x = 100
-	y = 0b100 // binario
-	z = 0o12  // Octal
-	w = 0xFF  // Hexadecimal
-)
-
-const (
-	Sunday = iota + 1
-	Monday
-	Tuesday
-	Wednesday
-	Thursday
-	Friday
-	Saturday
-)
+import "fmt"
 
 func main() {
-	fmt.Println("Hola")
-	fmt.Println(quote.Hello())
+	// const name = "Alexis"
+	// age := 26
+	// fmt.Println("My name is", name, "and I'm", age, "years old")
 
-	// Variables
-	// dentro de las funciones se usa := para declarar variables
-	Firstname, lastName, age := "Mochi", "Morchi", 27
-	fmt.Println("Te amo", Firstname, lastName, age)
-	fmt.Println(Pi)
-	fmt.Println(x, y, z, w)
-	fmt.Println(Friday)
+	// fmt.Println("Skynet Beta Testing")
+
+	// var Objective = "Defend Humanity"
+	// This fail because the objective vairable is not used
+
+	const squares = 2
+	var circles = 0
+
+	fmt.Println("Squares:", squares)
+	fmt.Println("Circles:", circles)
+
+	squares = 1
+	cirlces = 7
+
+	fmt.Println("Squares:", squares)
+	fmt.Println("Circles:", circles)
+
+	// this will fail because the variable squares is a constant and
+	// cannot be reassigned a new value
+
 }
