@@ -3,61 +3,28 @@ package main
 import "fmt"
 
 /*
+1. Define a function that gets two integers, adds them and returns the result
+	i. Make sure to also write code that executes the function
+*/
 
-	1. What is the result of the following program? Why?
-
-
-func main() {
-	var userName
-	userName = "user"
-	fmt.Println(userName)
+func add(x, y int) int {
+	return x + y
 }
 
-syntax error: unexpected newline, expected type
-Error. Go is statically typed and you need to tell Go Compiler the data type when doing variable declaration
-*/
-
-/*
-	2. What is the result of the following program? Why?
-
 func main() {
-	var userName = 2
-	fmt.Println(userName)
+	fmt.Println("Result:", add(2, 12))
 }
 
-It will print 2. The reason it doesn't fail (even though you didn't declare the type) is due to Go performing type inference where infers the type from the assigned value
-
-*/
-
 /*
-3. Fix the following program by modifying one of the lines (but not adding or removing lines)
+2. What is the problem with the following code? How to fix it?
 
-	func main() {
-		var userName
-		userName = "user"
-		fmt.Println(userName)
-	}
-*/
-// func main() {
-// 	var userName string // declare the type of userName
-// 	userName = "user"
-// 	fmt.Println(userName)
-// }
-
-/*
-	4. Modiy the following program to print the types of the variables
-
-	func main() {
-		var food = "Pizza"
-		var slices = 4
-		var pineappleOnPizza = True
-	}
-*/
+func add(x, y int) {
+	return x + y
+}
 
 func main() {
-	var food = "Pizza"
-	var slices = 4
-	var pineappleOnPizza = true
-
-	fmt.Printf("food is %T\nslices is %T\npinneapleOnPizza is %T", food, slices, pineappleOnPizza)
+	fmt.Println("Result:", add(2, 3))
 }
+
+It returns an integer but at the same time the function doen't specify any return value, so Go expects the function to return nothing
+*/
