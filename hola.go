@@ -1,24 +1,24 @@
 package main
 
-import "fmt"
-
 /*
-1. Modify the following program to ask for a name and an age
-	i. Modify the print statement accordingly
+Packages
 
-func main() {
-	fmt.Printf("Your name is __ and your age is __")
-}
+Objectives
+	1. Using the time package, print The time now is: <TIME>
+	2. Using the math/rand package, generate random integer between 0 and 100
+	3. Using the math package calculate the square of 9
 */
+import (
+	"fmt"
+	"time"
+	"math"
+	"math/rand"
+)
+
 
 func main() {
-	var firstName string
-	var age int
 
-	fmt.Print("Enter your name: ")
-	fmt.Scan(&firstName)
-	fmt.Print("Enter your age: ")
-	fmt.Scan(&age)
-	
-	fmt.Printf("Your name is %v and your age is %v", firstName, age)
+	fmt.Println("The time now is:", time.Now())
+	fmt.Println("Random number", rand.Intn(100))
+	fmt.Printf("The square of 9: %g\n", math.Sqrt(9))
 }
