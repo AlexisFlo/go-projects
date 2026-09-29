@@ -1,24 +1,88 @@
 package main
 
 /*
-Packages
+Logical Operators
 
 Objectives
-	1. Using the time package, print The time now is: <TIME>
-	2. Using the math/rand package, generate random integer between 0 and 100
-	3. Using the math package calculate the square of 9
-*/
-import (
-	"fmt"
-	"time"
-	"math"
-	"math/rand"
-)
+	1. What is the output of the following code:
 
+	package main
+
+	import "fmt"
+
+	func main() {
+		x := 2017
+		result1 := x > 50 && x < 2020
+		result2 := x > 50 && x%2 == 0
+		result3 := x%2 == 1 && x+3 == 2025
+		fmt.Println(result1)
+		fmt.Println(result2)
+		fmt.Println(result3)
+
+		x += 5
+		result1 = x > 50 && x < 3000
+		result2 = x > 50 && x < 3000
+		result3 = x > 50 && x < 3000
+		fmt.Println(result1)
+		fmt.Println(result2)
+		fmt.Println(result3)
+	}
+
+	true
+	false
+	false
+	true
+	true
+	true
+
+	2. What is thee ouput of the following code:
+
+	package main
+
+import "fmt"
 
 func main() {
+    x := 2017
+    result1 := x > 50 || x < 2020
+    result2 := x > 50 || x%2 == 0
+    result3 := x%2 == 1 || x+3 == 2025
+    fmt.Println(result1)
+    fmt.Println(result2)
+    fmt.Println(result3)
 
-	fmt.Println("The time now is:", time.Now())
-	fmt.Println("Random number", rand.Intn(100))
-	fmt.Printf("The square of 9: %g\n", math.Sqrt(9))
+    x += 5
+    result1 = x > 50 || x < 3000
+    result2 = x > 50 || x < 3000
+    result3 = x > 50 || x < 3000
+    fmt.Println(result1)
+    fmt.Println(result2)
+    fmt.Println(result3)
+}
+
+true
+true
+true
+true
+true
+true
+
+*/
+import "fmt"
+
+func main() {
+    x := 2017
+    result1 := x > 50 || x < 2020
+    result2 := x > 50 || x%2 == 0
+    result3 := x%2 == 1 || x+3 == 2025
+    fmt.Println(result1)
+    fmt.Println(result2)
+    fmt.Println(result3)
+
+    x += 5
+    result1 = x > 50 || x < 3000
+    result2 = x > 50 || x < 3000
+    result3 = x > 50 || x < 3000
+    fmt.Println(result1)
+    fmt.Println(result2)
+    fmt.Println(result3)
 }
