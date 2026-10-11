@@ -22,8 +22,8 @@ func main() {
 	rng := rand.New(rand.NewSource(time.Now().UnixNano()))
 	var randNum int = rng.Intn(100)
 
-	if randNum > 50 {
-		fmt.Println("It's closer to 100")
+	if randNum > 50  && randNum%2 == 0{
+		fmt.Println("It's closer to 100 and even")
 	} else if randNum < 50 {
 		fmt.Println("It's closer to 0")
 	} else {
