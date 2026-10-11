@@ -24,8 +24,10 @@ func main() {
 
 	if randNum > 50 {
 		fmt.Println("It's closer to 100")
-	} else {
+	} else if randNum < 50 {
 		fmt.Println("It's closer to 0")
+	} else {
+		fmt.Println("It's 50!")
 	}
 	fmt.Printf("Generated number: %v\n", randNum)
 }
