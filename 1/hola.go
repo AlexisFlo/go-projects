@@ -1,4 +1,4 @@
-package main
+// package main
 
 /*
 Logical Operators
@@ -67,7 +67,7 @@ true
 true
 
 */
-import "fmt"
+// import "fmt"
 
 // func main() {
 //     x := 2017
